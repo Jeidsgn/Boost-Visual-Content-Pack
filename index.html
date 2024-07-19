@@ -1,720 +1,194 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>🎨 Boost Visual Content Pack 🚀</title><style>
-/* cspell:disable-file */
-/* webkit printing magic: print all background colors */
-html {
-	-webkit-print-color-adjust: exact;
-}
-* {
-	box-sizing: border-box;
-	-webkit-print-color-adjust: exact;
-}
-
-html,
-body {
-	margin: 0;
-	padding: 0;
-}
-.column-list {
-                display: block !important;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎨 Boost Visual Content Pack 🚀</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .column-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .column {
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        .callout {
+            background-color: #f0f0f0;
+            border-left: 5px solid #333;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .image {
+            max-width: 100%;
+            height: auto;
+        }
+        .highlight-yellow {
+            background-color: #ffffcc;
+        }
+        .highlight-gray {
+            background-color: #f0f0f0;
+        }
+        @media only screen and (max-width: 768px) {
+            .column-list {
+                display: block;
             }
-.column {
-		display: block !important;
+            .column {
                 width: 100% !important;
                 margin-bottom: 20px;
             }
-@media only screen {
-	body {
-		margin: 2em auto;
-		max-width: 900px;
-		color: rgb(55, 53, 47);
-	}
-}
-
-body {
-	line-height: 1.5;
-	white-space: pre-wrap;
-}
-
-a,
-a.visited {
-	color: inherit;
-	text-decoration: underline;
-}
-
-.pdf-relative-link-path {
-	font-size: 80%;
-	color: #444;
-}
-
-h1,
-h2,
-h3 {
-	letter-spacing: -0.01em;
-	line-height: 1.2;
-	font-weight: 600;
-	margin-bottom: 0;
-}
-
-.page-title {
-	font-size: 2.5rem;
-	font-weight: 700;
-	margin-top: 0;
-	margin-bottom: 0.75em;
-}
-
-h1 {
-	font-size: 1.875rem;
-	margin-top: 1.875rem;
-}
-
-h2 {
-	font-size: 1.5rem;
-	margin-top: 1.5rem;
-}
-
-h3 {
-	font-size: 1.25rem;
-	margin-top: 1.25rem;
-}
-
-.source {
-	border: 1px solid #ddd;
-	border-radius: 3px;
-	padding: 1.5em;
-	word-break: break-all;
-}
-
-.callout {
-	border-radius: 3px;
-	padding: 1rem;
-}
-
-figure {
-	margin: 1.25em 0;
-	page-break-inside: avoid;
-}
-
-figcaption {
-	opacity: 0.5;
-	font-size: 85%;
-	margin-top: 0.5em;
-}
-
-mark {
-	background-color: transparent;
-}
-
-.indented {
-	padding-left: 1.5em;
-}
-
-hr {
-	background: transparent;
-	display: block;
-	width: 100%;
-	height: 1px;
-	visibility: visible;
-	border: none;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
-}
-
-img {
-	max-width: 100%;
-}
-
-@media only print {
-	img {
-		max-height: 100vh;
-		object-fit: contain;
-	}
-}
-
-@page {
-	margin: 1in;
-}
-
-.collection-content {
-	font-size: 0.875rem;
-}
-
-.column-list {
-	display: flex;
-	justify-content: space-between;
-}
-
-.column {
-	padding: 0 1em;
-}
-
-.column:first-child {
-	padding-left: 0;
-}
-
-.column:last-child {
-	padding-right: 0;
-}
-
-.table_of_contents-item {
-	display: block;
-	font-size: 0.875rem;
-	line-height: 1.3;
-	padding: 0.125rem;
-}
-
-.table_of_contents-indent-1 {
-	margin-left: 1.5rem;
-}
-
-.table_of_contents-indent-2 {
-	margin-left: 3rem;
-}
-
-.table_of_contents-indent-3 {
-	margin-left: 4.5rem;
-}
-
-.table_of_contents-link {
-	text-decoration: none;
-	opacity: 0.7;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
-}
-
-table,
-th,
-td {
-	border: 1px solid rgba(55, 53, 47, 0.09);
-	border-collapse: collapse;
-}
-
-table {
-	border-left: none;
-	border-right: none;
-}
-
-th,
-td {
-	font-weight: normal;
-	padding: 0.25em 0.5em;
-	line-height: 1.5;
-	min-height: 1.5em;
-	text-align: left;
-}
-
-th {
-	color: rgba(55, 53, 47, 0.6);
-}
-
-ol,
-ul {
-	margin: 0;
-	margin-block-start: 0.6em;
-	margin-block-end: 0.6em;
-}
-
-li > ol:first-child,
-li > ul:first-child {
-	margin-block-start: 0.6em;
-}
-
-ul > li {
-	list-style: disc;
-}
-
-ul.to-do-list {
-	padding-inline-start: 0;
-}
-
-ul.to-do-list > li {
-	list-style: none;
-}
-
-.to-do-children-checked {
-	text-decoration: line-through;
-	opacity: 0.375;
-}
-
-ul.toggle > li {
-	list-style: none;
-}
-
-ul {
-	padding-inline-start: 1.7em;
-}
-
-ul > li {
-	padding-left: 0.1em;
-}
-
-ol {
-	padding-inline-start: 1.6em;
-}
-
-ol > li {
-	padding-left: 0.2em;
-}
-
-.mono ol {
-	padding-inline-start: 2em;
-}
-
-.mono ol > li {
-	text-indent: -0.4em;
-}
-
-.toggle {
-	padding-inline-start: 0em;
-	list-style-type: none;
-}
-
-/* Indent toggle children */
-.toggle > li > details {
-	padding-left: 1.7em;
-}
-
-.toggle > li > details > summary {
-	margin-left: -1.1em;
-}
-
-.selected-value {
-	display: inline-block;
-	padding: 0 0.5em;
-	background: rgba(206, 205, 202, 0.5);
-	border-radius: 3px;
-	margin-right: 0.5em;
-	margin-top: 0.3em;
-	margin-bottom: 0.3em;
-	white-space: nowrap;
-}
-
-.collection-title {
-	display: inline-block;
-	margin-right: 1em;
-}
-
-.page-description {
-    margin-bottom: 2em;
-}
-
-.simple-table {
-	margin-top: 1em;
-	font-size: 0.875rem;
-	empty-cells: show;
-}
-.simple-table td {
-	height: 29px;
-	min-width: 120px;
-}
-
-.simple-table th {
-	height: 29px;
-	min-width: 120px;
-}
-
-.simple-table-header-color {
-	background: rgb(247, 246, 243);
-	color: black;
-}
-.simple-table-header {
-	font-weight: 500;
-}
-
-time {
-	opacity: 0.5;
-}
-
-.icon {
-	display: inline-block;
-	max-width: 1.2em;
-	max-height: 1.2em;
-	text-decoration: none;
-	vertical-align: text-bottom;
-	margin-right: 0.5em;
-}
-
-img.icon {
-	border-radius: 3px;
-}
-
-.user-icon {
-	width: 1.5em;
-	height: 1.5em;
-	border-radius: 100%;
-	margin-right: 0.5rem;
-}
-
-.user-icon-inner {
-	font-size: 0.8em;
-}
-
-.text-icon {
-	border: 1px solid #000;
-	text-align: center;
-}
-
-.page-cover-image {
-	display: block;
-	object-fit: cover;
-	width: 100%;
-	max-height: 30vh;
-}
-
-.page-header-icon {
-	font-size: 3rem;
-	margin-bottom: 1rem;
-}
-
-.page-header-icon-with-cover {
-	margin-top: -0.72em;
-	margin-left: 0.07em;
-}
-
-.page-header-icon img {
-	border-radius: 3px;
-}
-
-.link-to-page {
-	margin: 1em 0;
-	padding: 0;
-	border: none;
-	font-weight: 500;
-}
-
-p > .user {
-	opacity: 0.5;
-}
-
-td > .user,
-td > time {
-	white-space: nowrap;
-}
-
-input[type="checkbox"] {
-	transform: scale(1.5);
-	margin-right: 0.6em;
-	vertical-align: middle;
-}
-
-p {
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-}
-
-.image {
-	border: none;
-	margin: 1.5em 0;
-	padding: 0;
-	border-radius: 0;
-	text-align: center;
-}
-
-.code,
-code {
-	background: rgba(135, 131, 120, 0.15);
-	border-radius: 3px;
-	padding: 0.2em 0.4em;
-	border-radius: 3px;
-	font-size: 85%;
-	tab-size: 2;
-}
-
-code {
-	color: #eb5757;
-}
-
-.code {
-	padding: 1.5em 1em;
-}
-
-.code-wrap {
-	white-space: pre-wrap;
-	word-break: break-all;
-}
-
-.code > code {
-	background: none;
-	padding: 0;
-	font-size: 100%;
-	color: inherit;
-}
-
-blockquote {
-	font-size: 1.25em;
-	margin: 1em 0;
-	padding-left: 1em;
-	border-left: 3px solid rgb(55, 53, 47);
-}
-
-.bookmark {
-	text-decoration: none;
-	max-height: 8em;
-	padding: 0;
-	display: flex;
-	width: 100%;
-	align-items: stretch;
-}
-
-.bookmark-title {
-	font-size: 0.85em;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	height: 1.75em;
-	white-space: nowrap;
-}
-
-.bookmark-text {
-	display: flex;
-	flex-direction: column;
-}
-
-.bookmark-info {
-	flex: 4 1 180px;
-	padding: 12px 14px 14px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.bookmark-image {
-	width: 33%;
-	flex: 1 1 180px;
-	display: block;
-	position: relative;
-	object-fit: cover;
-	border-radius: 1px;
-}
-
-.bookmark-description {
-	color: rgba(55, 53, 47, 0.6);
-	font-size: 0.75em;
-	overflow: hidden;
-	max-height: 4.5em;
-	word-break: break-word;
-}
-
-.bookmark-href {
-	font-size: 0.75em;
-	margin-top: 0.25em;
-}
-
-.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
-.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
-.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
-.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
-.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
-.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
-.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
-.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
-.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
-.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
-.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
-.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
-.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
-.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
-.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
-.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
-.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
-.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
-.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
-.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
-.highlight-default {
-	color: rgba(55, 53, 47, 1);
-}
-.highlight-gray {
-	color: rgba(120, 119, 116, 1);
-	fill: rgba(120, 119, 116, 1);
-}
-.highlight-brown {
-	color: rgba(159, 107, 83, 1);
-	fill: rgba(159, 107, 83, 1);
-}
-.highlight-orange {
-	color: rgba(217, 115, 13, 1);
-	fill: rgba(217, 115, 13, 1);
-}
-.highlight-yellow {
-	color: rgba(203, 145, 47, 1);
-	fill: rgba(203, 145, 47, 1);
-}
-.highlight-teal {
-	color: rgba(68, 131, 97, 1);
-	fill: rgba(68, 131, 97, 1);
-}
-.highlight-blue {
-	color: rgba(51, 126, 169, 1);
-	fill: rgba(51, 126, 169, 1);
-}
-.highlight-purple {
-	color: rgba(144, 101, 176, 1);
-	fill: rgba(144, 101, 176, 1);
-}
-.highlight-pink {
-	color: rgba(193, 76, 138, 1);
-	fill: rgba(193, 76, 138, 1);
-}
-.highlight-red {
-	color: rgba(212, 76, 71, 1);
-	fill: rgba(212, 76, 71, 1);
-}
-.highlight-gray_background {
-	background: rgba(241, 241, 239, 1);
-}
-.highlight-brown_background {
-	background: rgba(244, 238, 238, 1);
-}
-.highlight-orange_background {
-	background: rgba(251, 236, 221, 1);
-}
-.highlight-yellow_background {
-	background: rgba(251, 243, 219, 1);
-}
-.highlight-teal_background {
-	background: rgba(237, 243, 236, 1);
-}
-.highlight-blue_background {
-	background: rgba(231, 243, 248, 1);
-}
-.highlight-purple_background {
-	background: rgba(244, 240, 247, 0.8);
-}
-.highlight-pink_background {
-	background: rgba(249, 238, 243, 0.8);
-}
-.highlight-red_background {
-	background: rgba(253, 235, 236, 1);
-}
-.block-color-default {
-	color: inherit;
-	fill: inherit;
-}
-.block-color-gray {
-	color: rgba(120, 119, 116, 1);
-	fill: rgba(120, 119, 116, 1);
-}
-.block-color-brown {
-	color: rgba(159, 107, 83, 1);
-	fill: rgba(159, 107, 83, 1);
-}
-.block-color-orange {
-	color: rgba(217, 115, 13, 1);
-	fill: rgba(217, 115, 13, 1);
-}
-.block-color-yellow {
-	color: rgba(203, 145, 47, 1);
-	fill: rgba(203, 145, 47, 1);
-}
-.block-color-teal {
-	color: rgba(68, 131, 97, 1);
-	fill: rgba(68, 131, 97, 1);
-}
-.block-color-blue {
-	color: rgba(51, 126, 169, 1);
-	fill: rgba(51, 126, 169, 1);
-}
-.block-color-purple {
-	color: rgba(144, 101, 176, 1);
-	fill: rgba(144, 101, 176, 1);
-}
-.block-color-pink {
-	color: rgba(193, 76, 138, 1);
-	fill: rgba(193, 76, 138, 1);
-}
-.block-color-red {
-	color: rgba(212, 76, 71, 1);
-	fill: rgba(212, 76, 71, 1);
-}
-.block-color-gray_background {
-	background: rgba(241, 241, 239, 1);
-}
-.block-color-brown_background {
-	background: rgba(244, 238, 238, 1);
-}
-.block-color-orange_background {
-	background: rgba(251, 236, 221, 1);
-}
-.block-color-yellow_background {
-	background: rgba(251, 243, 219, 1);
-}
-.block-color-teal_background {
-	background: rgba(237, 243, 236, 1);
-}
-.block-color-blue_background {
-	background: rgba(231, 243, 248, 1);
-}
-.block-color-purple_background {
-	background: rgba(244, 240, 247, 0.8);
-}
-.block-color-pink_background {
-	background: rgba(249, 238, 243, 0.8);
-}
-.block-color-red_background {
-	background: rgba(253, 235, 236, 1);
-}
-.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
-.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
-.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
-.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
-.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
-.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
-.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
-.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
-.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
-.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
-.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
-.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
-.select-value-color-pageGlass { background-color: undefined; }
-.select-value-color-washGlass { background-color: undefined; }
-
-.checkbox {
-	display: inline-flex;
-	vertical-align: text-bottom;
-	width: 16;
-	height: 16;
-	background-size: 16px;
-	margin-left: 2px;
-	margin-right: 5px;
-}
-
-.checkbox-on {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-
-.checkbox-off {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-	
-</style></head><body><article id="907adaa2-a151-4a6b-a0a3-b552aebc7adf" class="page sans"><header><h1 class="page-title">🎨 Boost Visual Content Pack 🚀</h1><p class="page-description"></p></header><div class="page-body"><div id="f6b6ce6a-1f34-4a51-b6f5-5253cd2016b3" class="column-list"><div id="da696fbf-d03b-479c-b12f-7f9e0c7762af" style="width:41.666666666666664%" class="column"><p id="a41a30c9-b90b-485b-ae41-207bb7a4556d" class="">
-</p></div><div id="43bef46e-2fbe-421b-b1fd-95e9862e0580" style="width:108.33333333333333%" class="column"><hr id="94af6f52-501e-48c7-81b0-a62b0000f312"/><h1 id="99437e28-9007-4952-82eb-987f64a1b85b" class="">📈 Transform your brand with Art and Analytics</h1><hr id="feec318d-5d49-4b59-a09e-d6614dcadcec"/></div><div id="aca2b330-9a9f-458b-a314-e386457c09ba" style="width:37.500000000000014%" class="column"><p id="5a2bae87-ae5f-463d-9648-6635074a9f86" class="">
-</p></div></div><div id="32c1e8f8-b09d-4a97-b1f7-fbc888fa2d43" class="column-list"><div id="cb640ebb-f184-47b7-ab24-35cba0baf52f" style="width:54.166666666666664%" class="column"><p id="32d73b37-0d4b-438b-8a61-49ef84d538dc" class="">
-</p></div><div id="76d77ad1-2cdf-435c-9589-55cd0cf79db3" style="width:45.83333333333333%" class="column"><figure id="208d4d8f-0e82-44c0-9f6d-096d58830800" class="image"><a href="%F0%9F%8E%A8%20Boost%20Visual%20Content%20Pack%20%F0%9F%9A%80%20907adaa2a1514a6ba0a3b552aebc7adf/ArtbyJeiDsgnModelruff_dieselWhenforceandartmixtheiredgesarefuzzy...fitnessposinganimationrotoscope-ezgif.com-effects.gif"><img style="width:288px" src="%F0%9F%8E%A8%20Boost%20Visual%20Content%20Pack%20%F0%9F%9A%80%20907adaa2a1514a6ba0a3b552aebc7adf/ArtbyJeiDsgnModelruff_dieselWhenforceandartmixtheiredgesarefuzzy...fitnessposinganimationrotoscope-ezgif.com-effects.gif"/></a></figure></div><div id="d48a58fe-1f76-459d-a03d-b31e19354529" style="width:95.83333333333331%" class="column"><p id="74ee30f9-4c1c-4b02-a7e0-1aeadda8dd66" class="">
-</p><h3 id="51e79d8f-956c-4d65-a49b-cfec11816a8f" class="">👑Prestige</h3><h3 id="d0970989-d10c-45ac-be34-8aacc6e1f4c5" class="">🌈Differentiation</h3><h3 id="84ac82c5-73c2-4a90-a192-bfd6a22d916d" class="">🤝Engagement</h3><h3 id="a14f97db-50cc-4131-9290-d12b629aa763" class="">🔥Expectation</h3></div></div><figure id="3b60798d-5947-4747-bbaa-80a23f191cdf"><div class="source"><a href="https://indify.co/widgets/live/button/buLC77SjJUIFRi3Loyp5">https://indify.co/widgets/live/button/buLC77SjJUIFRi3Loyp5</a></div></figure><hr id="94ae45ad-5134-4baa-80d5-c0dc858bac18"/><div id="a6b57242-8f9c-40e7-abe1-15ba71ff2920" class="column-list"><div id="3185308d-5436-4cb4-8c88-fe5668cb8cc1" style="width:33.33333333333333%" class="column"><p id="46845e4d-5e06-4c83-a816-7badbd07d7fa" class="">
-</p></div><div id="eb9844e2-9de6-4740-9420-8e79f3d12f11" style="width:33.33333333333333%" class="column"><h1 id="154a9e09-63d1-4257-a191-1f6b96cf691c" class="">  📜 Key Pack Features</h1></div><div id="cf63f683-0904-4b0a-a380-cf6e32e8156a" style="width:33.33333333333333%" class="column"><p id="03b11e72-a486-465e-a2af-00caa1e26520" class="">
-</p></div></div><div id="e31ae664-88cc-46b9-a5c1-310e833810ae" class="column-list"><div id="a057203e-3564-4825-9205-6e15f98dd54c" style="width:20%" class="column"><h2 id="b8db27c0-8d5f-425a-8de5-73c912c08d57" class="block-color-yellow"><mark class="highlight-default">🎥 </mark><mark class="highlight-default"><strong>1 Animated Reel</strong></mark></h2><p id="c8f7f25a-d819-4384-a248-26816793b506" class="block-color-gray">Finished work, highlighting the essence and unique style</p><p id="f149f4d4-e775-4c57-8a9f-0fe6ed594569" class="">
-</p></div><div id="ce70faf7-ceb8-472c-9fc5-ccecbf130807" style="width:20%" class="column"><h2 id="16925e1c-cb48-4130-8289-370ab6e1b769" class="">🎬<strong>1 Edited Reel</strong></h2><p id="33bdf3ab-3547-4792-a356-39240bd4b47d" class="block-color-gray">Sample process in an additional video</p><p id="c94cacba-71cb-4bc9-ae2b-8eb15b8a80a3" class="">
-</p></div><div id="194083b9-a84a-4de0-9364-9661c42b3711" style="width:20%" class="column"><h2 id="9f20d667-cbad-4019-8b09-6ca3766187ed" class="">🏞️ <strong>Multimedia content</strong></h2><p id="a7e04d72-f2c8-442c-97e0-79179c18a72f" class="block-color-gray">Images or videos complementing</p><p id="be477b6a-bfb1-40ed-8708-099fa1ce781b" class="">
-</p></div><div id="b6efdaa5-ad59-4901-b250-6538b4a43e26" style="width:20%" class="column"><h2 id="43f21114-8177-42ba-8d78-6574df3b04d0" class="">📅 <strong>Flash Boost Strategy</strong></h2><p id="57ee7fbb-7cfc-4da3-b5af-26e9b5fed7e3" class="block-color-gray">Optimized  strategy to modify your audience&#x27;s behavior</p><p id="c0191800-5736-40ad-9c2e-6a6216fed3d7" class="">
-</p></div><div id="884e394d-b657-4f21-9d6b-bb80d772a4bd" style="width:20%" class="column"><h2 id="99491a55-c174-4cac-8e12-681f12ec13a8" class="">📊 <strong>Analytics and Tracking</strong></h2><p id="fb390b42-36ad-4e73-bf51-318fada340d7" class="block-color-gray">Detailed impact report, with graphs and data analysis.</p><p id="2d5842c3-1643-4d6d-8f30-eee560b57234" class="">
-</p></div></div><div id="8faef189-7a06-443c-bad1-832775cd5214" class="column-list"><div id="93f775c4-b5eb-44be-a7c2-f603be568cb7" style="width:112.5%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="c192c541-3d34-423f-8f3c-17298e919d57"><div style="font-size:1.5em"><span class="icon">📄</span></div><div style="width:100%"><strong> Do you want to know more?</strong><p id="01b7c9e8-8a3e-4434-9de1-3ec784f783f9" class="">Find out all the details about the Strategic Visual Content Package, its features and how it can benefit your brand on our dedicated page</p></div></figure></div><div id="fa9907e9-ed26-4cee-8c97-992697974bbb" style="width:26.38888888888889%" class="column"><h2 id="5117e71a-ebc5-4ce2-bdb3-ee1cd3683e39" class=""><strong>➡️ Pack Details</strong></h2></div></div><hr id="d95a349e-05cc-42fa-988f-07eedefdbaa0"/><div id="0083b612-7cd2-4f05-9674-7e0204fe8c25" class="column-list"><div id="76758b27-48ca-4049-83cc-c6d17035755c" style="width:16.666666666666664%" class="column"><p id="a7e20271-6257-40f1-b960-8ae783e74858" class="">
-</p></div><div id="d72b693e-42a9-45d8-bf00-74b1c2524414" style="width:70.83333333333333%" class="column"><h1 id="adfcc450-6b6d-44c3-8e04-346c99a082bf" class="">🌟 The solution to differentiate yourself and boost your prestige</h1><p id="a0364d3b-468f-44aa-9e16-5fa2083cff22" class="">
-</p><p id="5315ecb4-7f88-46f6-8f22-69bccc42bba2" class="">👤 Looking to stand out in a saturated market? We know that communicating your essence and style of work can be a challenge.</p><p id="6d908920-9363-450d-857a-111d7d33cb01" class="">We understand your struggle and want to help you stand out with visual content that speaks to you and your unique style.</p><p id="d2584658-e3e6-479a-a5ae-0d59e11cd908" class="">
-</p><figure id="1a67297a-69f7-414c-af0a-e7b2ea876952"><div class="source"><a href="https://indify.co/widgets/live/button/buLC77SjJUIFRi3Loyp5">https://indify.co/widgets/live/button/buLC77SjJUIFRi3Loyp5</a></div></figure></div><div id="fc2426a7-ba8b-4925-907e-add63da013ca" style="width:12.499999999999993%" class="column"><p id="6de90c5f-a2fe-455a-81dd-e39825d0b68d" class="">
-</p></div></div><p id="5a7418b5-1458-4c07-9a9d-9e3e9071d3aa" class="">
-</p><hr id="1ef69c89-4554-4080-9ea6-8260b7f77769"/><div id="d41df412-a37c-44ce-9dd9-4825ecc693f9" class="column-list"><div id="7afcf79e-8fd6-4ef9-8db4-50d50b447c9c" style="width:41.666666666666664%" class="column"><p id="20743d67-32af-4bb5-848d-3f3ae221171f" class="">
-</p></div><div id="fdb593d5-1acc-4326-90fa-6ad266a81776" style="width:25.000000000000007%" class="column"><h1 id="3187568c-13d2-4281-a88c-3ba268207fc4" class="">💬 Our Partnerships</h1></div><div id="d3c27edd-51d7-43f0-a7d9-4ed4e50f0b53" style="width:33.33333333333333%" class="column"><p id="70bd45a7-b44c-423c-9481-cece72590c6b" class="">
-</p></div></div><p id="ec544ff2-379b-4618-9235-d687a1b6641b" class="">
-</p><div id="4ce0a05e-4cdc-4676-a24c-37f1070afcb5" class="column-list"><div id="5d111adf-cdf5-430d-80e1-4306cae00bfb" style="width:18.75%" class="column"><figure id="7f16b602-d1bb-4060-bfd3-eadeedde8c3f" class="image"><a href="%F0%9F%8E%A8%20Boost%20Visual%20Content%20Pack%20%F0%9F%9A%80%20907adaa2a1514a6ba0a3b552aebc7adf/peter_hartwig.png"><img style="width:288px" src="%F0%9F%8E%A8%20Boost%20Visual%20Content%20Pack%20%F0%9F%9A%80%20907adaa2a1514a6ba0a3b552aebc7adf/peter_hartwig.png"/></a></figure></div><div id="ea9e750b-ffa7-41d3-9e8f-c4c7837a1946" style="width:31.25%" class="column"><p id="24158b69-29b4-4969-9dbb-884c0fc20c10" class=""><mark class="highlight-gray"><strong><a href="https://www.instagram.com/pete.hartwig"><span style="border-bottom:0.05em solid">Peter Hartwig</span></a></strong></mark><mark class="highlight-gray"><strong><a href="https://www.instagram.com/pete.hartwig"> </a></strong></mark></p><p id="8e0ee00f-6c07-45cf-a123-6edc827d6d81" class=""><strong>IFBB PRO Athlete</strong></p><p id="044f8395-3f78-4662-a950-068470cc68be" class="block-color-blue"><mark class="highlight-yellow"><strong>★★★★★</strong></mark></p><p id="90baca43-b113-4758-b1fe-682810f9b400" class="">
-</p><hr id="ad1a2e2a-718a-4923-ab47-fb3d58612a3e"/><p id="38df7848-90c7-423f-a5f5-a4b7201aa54d" class="">Thank you so much for the reel. It is getting some great interaction and responses 😃 … </p><p id="111e5ac9-e2ec-4e41-b713-d2bd5a78973f" class="">it&#x27;s been so popular</p><p id="355f6275-17d6-421c-ac71-b21f6f41f249" class="">
-</p></div><div id="678677e5-4bed-4137-a4f5-4c3837b4b3af" style="width:18.75%" class="column"><figure id="348a3113-3165-4f6c-b736-ed3743a67145" class="image"><a href="%F0%9F%8E%A8%20Boost%20Visual%20Content%20Pack%20%F0%9F%9A%80%20907adaa2a1514a6ba0a3b552aebc7adf/henri.png"><img style="width:288px" src="%F0%9F%8E%A8%20Boost%20Visual%20Content%20Pack%20%F0%9F%9A%80%20907adaa2a1514a6ba0a3b552aebc7adf/henri.png"/></a></figure></div><div id="1f2131e1-0df0-48b2-868d-7f3d95d48fdb" style="width:31.25%" class="column"><p id="1120196e-ea63-41b8-92ac-482a5cbeb4ff" class=""><mark class="highlight-gray"><strong><a href="https://www.instagram.com/visionposing/"><span style="border-bottom:0.05em solid">Henri Bobby van Hooydonk</span></a></strong></mark></p><p id="7a9e1728-783e-4630-8536-9e1a59e62b31" class=""><strong>Posing Coach at Vision Posing</strong></p><p id="252cab3b-507e-4c22-bfbb-333761902cd5" class="block-color-blue"><mark class="highlight-yellow"><strong>★★★★★</strong></mark></p><p id="ad95e98f-27f9-49e8-87d8-0cd9c88d2445" class="">
-</p><hr id="a1d84ea0-2bab-4999-a57e-abe2bf2eeaad"/><p id="fce046d7-8633-444a-918f-35d154af5561" class="">It&#x27;s crazy how much you captured the essence… 😮‍💨😮‍💨😮‍💨🤯🤯🤯🤯🤯🔥</p><p id="726b665d-47e9-4c98-95af-1353d624a7ff" class="">You are the best 🙌🏼</p><p id="99c933fa-eb90-4ef3-8b3d-fe0c6ba666b3" class="">
-</p></div></div><div id="9dae176e-fb34-4aa7-a048-acf99a6b90d8" class="column-list"><div id="998b09b8-4f1a-4f85-8386-b0af83cc2f6d" style="width:18.75%" class="column"><figure id="ed4086fa-c7b3-4c7b-9241-68aec126ac7a" class="image"><a href="%F0%9F%8E%A8%20Boost%20Visual%20Content%20Pack%20%F0%9F%9A%80%20907adaa2a1514a6ba0a3b552aebc7adf/vicky.png"><img style="width:288px" src="%F0%9F%8E%A8%20Boost%20Visual%20Content%20Pack%20%F0%9F%9A%80%20907adaa2a1514a6ba0a3b552aebc7adf/vicky.png"/></a></figure></div><div id="0a2ac624-f4cb-465c-ab23-8031bc08821a" style="width:31.25%" class="column"><p id="c5e19553-e772-4a07-8b3d-2c08c11da974" class="block-color-blue"><mark class="highlight-gray"><strong><a href="https://www.instagram.com/scaladiluxe/"><span style="border-bottom:0.05em solid">Maria Victoria Lascala</span></a></strong></mark></p><p id="69f82b92-4e25-48b7-8cf4-5c7a2ba5a05e" class=""><strong>Fitness Athlete - Fashion Stylist</strong></p><p id="1ed97287-88ed-4908-be86-9514afce8ec8" class="block-color-blue"><mark class="highlight-yellow"><strong>★★★★★</strong></mark></p><p id="2497e300-3764-477b-bcbf-03347eda106e" class="">
-</p><hr id="0f0b1d6b-c75b-46b0-958e-dcc52098402f"/><p id="a20c1a32-40c4-4df7-aaf7-6245b515d4cc" class="">Yeah amazing!</p><p id="e3d4ebb6-2f11-411e-ba1f-8fd5aded7119" class="">Very good job !!</p><p id="e6fc13ce-a39e-4ef2-9cfc-d9e0a73bd75d" class="">
-</p></div><div id="deb3cb32-4e58-404a-8967-176399a805a6" style="width:18.75%" class="column"><figure id="19dd8e37-7219-460d-b0d5-e4cfd3e059c5" class="image"><a href="%F0%9F%8E%A8%20Boost%20Visual%20Content%20Pack%20%F0%9F%9A%80%20907adaa2a1514a6ba0a3b552aebc7adf/robbi.png"><img style="width:904px" src="%F0%9F%8E%A8%20Boost%20Visual%20Content%20Pack%20%F0%9F%9A%80%20907adaa2a1514a6ba0a3b552aebc7adf/robbi.png"/></a></figure></div><div id="d3eff745-af10-4a1d-9473-61afe1273317" style="width:31.25%" class="column"><p id="fc0a1e92-619e-45e5-889a-42fb1b2016e6" class=""><a href="https://www.instagram.com/latissaurusflex/"><span style="border-bottom:0.05em solid">Robbi Carlson</span></a></p><p id="bc116253-d3be-453c-850b-56b0f956191d" class=""><strong>Posing Coaching</strong></p><p id="aec535e1-e17d-4bba-9a7b-ced2e108f8e6" class="block-color-blue"><mark class="highlight-yellow"><strong>★★★★★</strong></mark></p><p id="037232e4-902d-42f7-aee9-076a7e7b2457" class="">
-</p><hr id="8f2dd9c3-408f-4792-8943-11e940ebab84"/><p id="d5b3f778-eecd-4bf6-91ed-d81c10d7c690" class="">Ahhh you did PHENOMENAL with this!!!!</p><p id="249b1d17-6816-4ed2-b3c1-5487cb800f48" class="">
-</p></div></div><hr id="1b6cd481-c8ce-4b12-abf0-508b0dc5fd35"/><div id="984486b0-7527-4377-a86a-619bc5518149" class="column-list"><div id="3cabc975-eb63-4ce8-9f76-7ca3d43c0172" style="width:50%" class="column"><p id="5c7f0159-d2d7-4403-8105-5bee92475ca7" class="">
-</p></div><div id="606ea416-c8b7-4acc-a047-8c2fe277fa03" style="width:29.166666666666668%" class="column"><h1 id="5f15be55-7433-4e9d-964d-be8a2aa32048" class=""><mark class="highlight-gray">FAQ</mark></h1></div><div id="a8994530-07c8-4ffa-a0fd-50abba24f1cf" style="width:20.83333333333334%" class="column"><p id="032636cf-2211-4f65-bc9b-4d6d19a2e8b6" class="">
-</p></div></div><ul id="a10ef46b-847c-44cb-8b6c-acd201091aa8" class="toggle"><li><details open=""><summary><strong>How does the pack work?</strong></summary><p id="1b6b8b25-59e9-40cb-a2e7-d572e514d770" class=""><mark class="highlight-gray">See a detailed explanation of our pack.</mark></p></details></li></ul><ul id="329e9ca6-087c-481b-a44f-5cd44b44d75e" class="toggle"><li><details open=""><summary><strong>What is the price of the pack?</strong></summary><p id="8c7cc9cb-4fc2-4b0f-98b8-690d5f3ba3d1" class=""><mark class="highlight-gray">Being such a specific service, the price depends on each project, so some information is necessary to know the price.</mark></p></details></li></ul><p id="738281e1-4e0d-44ca-bb4d-e4d7ad524ced" class="">
-</p><p id="8aa709b2-423d-4220-9992-fa4ac7b30648" class="">
-</p><p id="f5232bcc-41ef-437e-9caf-d3d05b99ee2a" class="">
-</p><hr id="3d6735a3-34ff-4be5-9cbc-37fd03bc6737"/><div id="85c5bfc4-2f84-4d39-b77c-9bc3c2fe440c" class="column-list"><div id="32fd1561-2b56-4f53-926c-31ae32b1ffb9" style="width:83.33333333333333%" class="column"><p id="2f0b17db-7940-42fc-b2e1-9caf8e23dcba" class="">
-</p></div><div id="93e0eca8-5ec0-454a-8f61-0254df883c8a" style="width:83.33333333333333%" class="column"><h1 id="3b13b8f7-bfa1-48e2-ad0f-9ca133b545ee" class=""> 👤 About me</h1><figure id="04c1ca8b-669a-4a27-9fe8-d1d94c84e617"><a href="https://linktr.ee/jeidsgn" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Jei | Instagram, Facebook, TikTok | Linktree</div><div class="bookmark-description">Explore my creative dream through networks of ideas and knowledge.</div></div><div class="bookmark-href"><img src="https://assets.production.linktr.ee/profiles/_next/static/logo-assets/apple-icon-180x180.png" class="icon bookmark-icon"/>https://linktr.ee/jeidsgn</div></div><img src="https://linktr.ee/og/image/jeidsgn.jpg" class="bookmark-image"/></a></figure><p id="abc497fa-0271-45cd-9c20-8e415058df5f" class="">
-</p></div><div id="68fe6441-e79a-4876-b87f-4585e573f728" style="width:79.16666666666669%" class="column"><p id="5469379b-5e71-464e-a66d-7c20bd5913b8" class="">
-</p></div></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎨 Boost Visual Content Pack 🚀</h1>
+    </header>
+
+    <div class="column-list">
+        <div class="column" style="width:41.666666666666664%"></div>
+        <div class="column" style="width:108.33333333333333%">
+            <hr>
+            <h1>📈 Transform your brand with Art and Analytics</h1>
+            <hr>
+        </div>
+        <div class="column" style="width:37.500000000000014%"></div>
+    </div>
+
+    <div class="column-list">
+        <div class="column" style="width:54.166666666666664%"></div>
+        <div class="column" style="width:45.83333333333333%">
+            <img src="path_to_your_image.gif" alt="Animation" class="image">
+        </div>
+        <div class="column" style="width:95.83333333333331%">
+            <h3>👑Prestige</h3>
+            <h3>🌈Differentiation</h3>
+            <h3>🤝Engagement</h3>
+            <h3>🔥Expectation</h3>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="column-list">
+        <div class="column" style="width:33.33333333333333%"></div>
+        <div class="column" style="width:33.33333333333333%">
+            <h1>📜 Key Pack Features</h1>
+        </div>
+        <div class="column" style="width:33.33333333333333%"></div>
+    </div>
+
+    <div class="column-list">
+        <div class="column" style="width:20%">
+            <h2 class="highlight-yellow">🎥 <strong>1 Animated Reel</strong></h2>
+            <p class="highlight-gray">Finished work, highlighting the essence and unique style</p>
+        </div>
+        <div class="column" style="width:20%">
+            <h2>🎬<strong>1 Edited Reel</strong></h2>
+            <p class="highlight-gray">Sample process in an additional video</p>
+        </div>
+        <div class="column" style="width:20%">
+            <h2>🏞️ <strong>Multimedia content</strong></h2>
+            <p class="highlight-gray">Images or videos complementing</p>
+        </div>
+        <div class="column" style="width:20%">
+            <h2>📅 <strong>Flash Boost Strategy</strong></h2>
+            <p class="highlight-gray">Optimized strategy to modify your audience's behavior</p>
+        </div>
+        <div class="column" style="width:20%">
+            <h2>📊 <strong>Analytics and Tracking</strong></h2>
+            <p class="highlight-gray">Detailed impact report, with graphs and data analysis.</p>
+        </div>
+    </div>
+
+    <div class="column-list">
+        <div class="column" style="width:112.5%">
+            <div class="callout">
+                <strong>Do you want to know more?</strong>
+                <p>Find out all the details about the Strategic Visual Content Package, its features and how it can benefit your brand on our dedicated page</p>
+            </div>
+        </div>
+        <div class="column" style="width:26.38888888888889%">
+            <h2><strong>➡️ Pack Details</strong></h2>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="column-list">
+        <div class="column" style="width:16.666666666666664%"></div>
+        <div class="column" style="width:70.83333333333333%">
+            <h1>🌟 The solution to differentiate yourself and boost your prestige</h1>
+            <p>👤 Looking to stand out in a saturated market? We know that communicating your essence and style of work can be a challenge.</p>
+            <p>We understand your struggle and want to help you stand out with visual content that speaks to you and your unique style.</p>
+        </div>
+        <div class="column" style="width:12.499999999999993%"></div>
+    </div>
+
+    <hr>
+
+    <div class="column-list">
+        <div class="column" style="width:41.666666666666664%"></div>
+        <div class="column" style="width:25.000000000000007%">
+            <h1>💬 Our Partnerships</h1>
+        </div>
+        <div class="column" style="width:33.33333333333333%"></div>
+    </div>
+
+    <!-- Repeat this structure for each partnership -->
+    <div class="column-list">
+        <div class="column" style="width:18.75%">
+            <img src="path_to_partner_image.png" alt="Partner Name" class="image">
+        </div>
+        <div class="column" style="width:31.25%">
+            <p class="highlight-gray"><strong><a href="#">Partner Name</a></strong></p>
+            <p><strong>Partner Title</strong></p>
+            <p class="highlight-yellow"><strong>★★★★★</strong></p>
+            <hr>
+            <p>Testimonial text here...</p>
+        </div>
+        <!-- Repeat for other partners -->
+    </div>
+
+    <hr>
+
+    <div class="column-list">
+        <div class="column" style="width:50%"></div>
+        <div class="column" style="width:29.166666666666668%">
+            <h1 class="highlight-gray">FAQ</h1>
+        </div>
+        <div class="column" style="width:20.83333333333334%"></div>
+    </div>
+
+    <details>
+        <summary><strong>How does the pack work?</strong></summary>
+        <p class="highlight-gray">See a detailed explanation of our pack.</p>
+    </details>
+
+    <details>
+        <summary><strong>What is the price of the pack?</strong></summary>
+        <p class="highlight-gray">Being such a specific service, the price depends on each project, so some information is necessary to know the price.</p>
+    </details>
+
+    <hr>
+
+    <div class="column-list">
+        <div class="column" style="width:83.33333333333333%"></div>
+        <div class="column" style="width:83.33333333333333%">
+            <h1>👤 About me</h1>
+            <a href="https://linktr.ee/jeidsgn">Jei | Instagram, Facebook, TikTok | Linktree</a>
+        </div>
+        <div class="column" style="width:79.16666666666669%"></div>
+    </div>
+
+</body>
+</html>
