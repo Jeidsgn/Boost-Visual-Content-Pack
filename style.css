@@ -34,7 +34,7 @@ a{
     height: auto;
 }
 #highlight-blue {
-    background:  rgb(20, 58, 78);
+    background-color:  #143a4e;
     border-radius: 10px;
 }
 #highlight-gray {
